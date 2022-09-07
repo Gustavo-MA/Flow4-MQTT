@@ -38,8 +38,7 @@ Instalación de NodeJS. Se recomienda tener instalado NodeJS en alguna versión 
 
 Instrucciones de preparación del entorno
 Para ejecutar este flow, es necesario lo siguiente crear los siguientes nodos en node-red
-
-/home/gustavo/Pictures/Screenshot from 2022-09-07 12-04-19.png
+![image](https://user-images.githubusercontent.com/111370930/188941442-9fd73fd0-a82d-4d5f-9bde-b16e9f4817bf.png)
 se debe agregar dentro de los modulos de funcion las siguientes intrsucciones:
 
 Para temperatura:
@@ -51,14 +50,15 @@ Para humedad:
 msg.payload=msg.payload.hum;
 msg.topic="Humedad"
 return msg;
--------------------------------
-Creamos un dashboad que se llame FLow4-MTT
+
+-----------------------------------
+Creamos un dasboard que se llame FLow4-MTT
 y agregamos los modulos anteriomente creados al nuevo dashboard (Temperatura, Humedad e Historico)
 Y damos clic sobre done.
 Y hacemos deploy
 Y nos dirigimos al dashboard en hhtp:/localhost/1808/ui
 Se mostrará el resultado del flow 4 visualizando3 graficas, 1 para el clima,  1 para humedad y uno que guarda el hitorico de ambas.
--------------------------------
+
 Instrucciones de operación
 
 Para poder visualizar los resultados es necesario abrir una terminal de mosquito y ejecutar los commandos para mandar la informacion a un JSON mediante el puerto local, local host como se muestra a continuacion:
@@ -67,11 +67,12 @@ Para poder visualizar los resultados es necesario abrir una terminal de mosquito
 Resultados
 
 A continuación puede verse una vista previa del resultado de este flow. 
-/home/gustavo/Downloads/FlowRes1.png
+![image](https://user-images.githubusercontent.com/111370930/188941684-f1dfba58-71cf-4746-9450-b529d5c658a6.png)
+
 --------------------------
 La imagen anterior muestra el primer resultado que se manda por la terminal mediante MQTT
---------------------------
-/home/gustavo/Downloads/FlowRes2.png
+
+![image](https://user-images.githubusercontent.com/111370930/188941745-8720615a-0a73-4518-8375-2625f76ffde0.png)
 
 Podemos observar que para varios resultados la grafica historico toma significancia, pues se van ordenando los nuevos resultados a los resultados anteriormente obtenidos.
 
